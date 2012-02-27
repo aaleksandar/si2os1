@@ -1,0 +1,690 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 04236H 04237H _TEXT              CODE
+ 04237H 0430EH 000D8H IDLE_TEXT          CODE
+ 0430FH 04602H 002F4H BOUNDED_TEXT       CODE
+ 04603H 04BACH 005AAH USER_TEXT          CODE
+ 04BADH 04E49H 0029DH KEYEVENT_TEXT      CODE
+ 04E4AH 04F1EH 000D5H IVTENTRY_TEXT      CODE
+ 04F1FH 05196H 00278H KEV_TEXT           CODE
+ 05197H 05274H 000DEH EVENT_TEXT         CODE
+ 05275H 054F2H 0027EH KSEM_TEXT          CODE
+ 054F3H 05640H 0014EH SEMAPHOR_TEXT      CODE
+ 05641H 0597DH 0033DH KERNEL_TEXT        CODE
+ 0597EH 05FC1H 00644H PCB_TEXT           CODE
+ 05FC2H 064C6H 00505H PCBLIST_TEXT       CODE
+ 064C7H 067C0H 002FAH THREAD_TEXT        CODE
+ 067C1H 068F0H 00130H TIMER_TEXT         CODE
+ 068F1H 06A0CH 0011CH MAIN_TEXT          CODE
+ 06A0DH 06B04H 000F8H UMAIN_TEXT         CODE
+ 06B05H 06C87H 00183H SCHEDULE_TEXT      CODE
+ 06C90H 06C90H 00000H _FARDATA           FAR_DATA
+ 06C90H 06C9AH 0000BH IDLE_DATA          FAR_DATA
+ 06C9CH 06C9CH 00000H BOUNDED_DATA       FAR_DATA
+ 06C9CH 06CDCH 00041H USER_DATA          FAR_DATA
+ 06CDEH 06D81H 000A4H KEYEVENT_DATA      FAR_DATA
+ 06D82H 06D82H 00000H IVTENTRY_DATA      FAR_DATA
+ 06D82H 06D82H 00000H KEV_DATA           FAR_DATA
+ 06D82H 06D82H 00000H EVENT_DATA         FAR_DATA
+ 06D82H 06D82H 00000H KSEM_DATA          FAR_DATA
+ 06D82H 06D82H 00000H SEMAPHOR_DATA      FAR_DATA
+ 06D82H 06D92H 00011H KERNEL_DATA        FAR_DATA
+ 06DA0H 06DBBH 0001CH KERNEL5_DATA       FAR_DATA
+ 06DBCH 06DD6H 0001BH PCB_DATA           FAR_DATA
+ 06DD8H 06DD8H 00000H PCBLIST_DATA       FAR_DATA
+ 06DD8H 06DD8H 00000H THREAD_DATA        FAR_DATA
+ 06DD8H 06DD8H 00000H TIMER_DATA         FAR_DATA
+ 06DE0H 06DE7H 00008H TIMER5_DATA        FAR_DATA
+ 06DE8H 06E0DH 00026H MAIN_DATA          FAR_DATA
+ 06E0EH 06E13H 00006H UMAIN_DATA         FAR_DATA
+ 06E14H 06E1FH 0000CH SCHEDULE_DATA      FAR_DATA
+ 06E20H 06E21H 00002H FSBDTR5_DATA       FAR_DATA
+ 06E30H 06E45H 00016H STDTR5_DATA        FAR_DATA
+ 06E50H 06E50H 00000H _FARBSS            FAR_BSS
+ 06E50H 06E50H 00000H _OVERLAY_          OVRINFO
+ 06E50H 06E50H 00000H _1STUB_            STUBSEG
+ 06E50H 07441H 005F2H _DATA              DATA
+ 07442H 07443H 00002H _CVTSEG            DATA
+ 07444H 07449H 00006H _SCNSEG            DATA
+ 0744AH 0744AH 00000H _CONST             CONST
+ 0744AH 0746DH 00024H _INIT_             INITDATA
+ 0746EH 0746EH 00000H _INITEND_          INITDATA
+ 0746EH 07485H 00018H _EXIT_             EXITDATA
+ 07486H 07486H 00000H _EXITEND_          EXITDATA
+ 07490H 0750FH 00080H _STACK             STACK
+
+  Address         Publics by Name
+
+ 0000:02BC       operator delete(void far*)
+ 0000:06C8       operator new(unsigned int)
+ 0430:000F       boundedbuffer::boundedbuffer(unsigned int)
+ 0430:00DE       boundedbuffer::~boundedbuffer()
+ 0430:0176       boundedbuffer::append(char)
+ 0430:024E       boundedbuffer::take()
+ 0460:04F5       consumer::
+ 0460:04FD       consumer::~consumer()
+ 0460:00D2       consumer::consume(char)
+ 0460:0119       consumer::run()
+ 0000:2131       endl(ostream far&)
+ 0519:0007       event::event(unsigned char)
+ 0519:0056       event::~event()
+ 0519:00C5       event::signal()
+ 0519:0094       event::wait(int)
+ 04BA:000D       eventrt9()
+ 0000:220F       filebuf::filebuf(int)
+ 0000:2328       filebuf::~filebuf()
+ 0000:2161       filebuf::close()
+ 06E2:0000       filebuf::openprot
+ 0000:23CA       filebuf::overflow(int)
+ 0000:25E7       filebuf::seekoff(long,seek_dir,int)
+ 0000:2524       filebuf::setbuf(char far*,int)
+ 0000:27A3       filebuf::sync()
+ 0000:2944       filebuf::underflow()
+ 0423:00D7       idlethread::
+ 0423:0007       idlethread::idlethread()
+ 0423:0075       idlethread::~idlethread()
+ 0423:00C9       idlethread::run()
+ 0000:3FAC       ios::ios()
+ 0000:3FF8       ios::~ios()
+ 06E3:0004       ios::adjustfield
+ 06E3:0000       ios::basefield
+ 06E3:0008       ios::floatfield
+ 0000:404F       ios::init(streambuf far*)
+ 06E3:000C       ios::nextbit
+ 0000:40AA       ios::setf(long)
+ 0000:4199       ios::setstate(int)
+ 06E3:0012       ios::stdioflush
+ 0000:41C6       ios::tie(ostream far*)
+ 06E3:0010       ios::usercount
+ 0000:2029       iostream_delete()
+ 0000:2B29       istream::istream()
+ 0000:2C4E       istream::~istream()
+ 0000:2B02       istream_withassign::operator =(streambuf far*)
+ 0000:2BB7       istream_withassign::istream_withassign()
+ 0000:2CC6       istream_withassign::~istream_withassign()
+ 04E4:000A       ivtentry::ivtentry(unsigned char,(far*)(),...)
+ 04E4:0071       ivtentry::~ivtentry()
+ 04E4:00B5       ivtentry::signalall()
+ 06DA:0014       kernel::backtokernel
+ 0564:0001       kernel::begin(int,char far*far*)
+ 06DA:0008       kernel::blockingevlist
+ 0564:0202       kernel::dispatch()
+ 0564:0114       kernel::end()
+ 06DA:0018       kernel::idlethread
+ 06DA:0000       kernel::pcblist
+ 06DA:000C       kernel::running
+ 06DA:0004       kernel::timedlist
+ 06DA:0010       kernel::timer
+ 04F1:000F       kernelev::kernelev(unsigned char)
+ 04F1:00A1       kernelev::~kernelev()
+ 04F1:01F6       kernelev::signalev()
+ 04F1:0100       kernelev::waitev(unsigned int)
+ 0527:0005       kernelsem::kernelsem(int)
+ 0527:0056       kernelsem::~kernelsem()
+ 0527:00B5       kernelsem::block(unsigned int)
+ 0527:026E       kernelsem::getval()
+ 0527:0244       kernelsem::signal()
+ 0527:0150       kernelsem::unblock()
+ 0527:01D8       kernelsem::wait(unsigned int)
+ 04BA:024E       keyboardevent::
+ 04BA:003A       keyboardevent::keyboardevent(boundedbuffer far*)
+ 04BA:0256       keyboardevent::~keyboardevent()
+ 04BA:00B3       keyboardevent::run()
+ 0000:2D76       ostream::ostream()
+ 0000:2E92       ostream::~ostream()
+ 0000:30D8       ostream::operator <<(long)
+ 0000:326B       ostream::operator <<(unsigned long)
+ 0000:3396       ostream::operator <<(char)
+ 0000:35D8       ostream::do_opfx()
+ 0000:3612       ostream::do_osfx()
+ 0000:2FA0       ostream::flush()
+ 0000:3675       ostream::outstr(const char far*,const char far*)
+ 0000:2D4F       ostream_withassign::operator =(streambuf far*)
+ 0000:2DFB       ostream_withassign::ostream_withassign()
+ 0000:2F17       ostream_withassign::~ostream_withassign()
+ 0597:000E       pcb::pcb(char far*,unsigned long,unsigned int,thread far*)
+ 0597:01E4       pcb::~pcb()
+ 0597:0407       pcb::allocatecontext()
+ 0597:03A4       pcb::emptyselfsem()
+ 0597:02A2       pcb::getid()
+ 0597:02CF       pcb::getmythread()
+ 0597:02B6       pcb::getname()
+ 0597:04CA       pcb::waitforchildren(pcb far*)
+ 0597:0543       pcb::waittocomplete(pcb far*)
+ 0597:05AC       pcb::wakeup()
+ 0597:02E8       pcb::wrapper()
+ 05FC:0002       pcblist::pcblist()
+ 05FC:0040       pcblist::~pcblist()
+ 05FC:0174       pcblist::getandremovefirst()
+ 05FC:02A0       pcblist::getbyid(int)
+ 05FC:0136       pcblist::getfirst()
+ 05FC:02FE       pcblist::getfreeid()
+ 05FC:0332       pcblist::getidbyname(char far*)
+ 05FC:03A4       pcblist::handletimedblock()
+ 05FC:0450       pcblist::hasblocked()
+ 05FC:00B0       pcblist::insert(pcb far*)
+ 05FC:01E7       pcblist::remove(pcb far*)
+ 05FC:04A8       pcblist::signalallevents(unsigned char)
+ 0460:0551       producer::
+ 0460:000F       producer::producer(boundedbuffer far*,char far*,char,unsigned int)
+ 0460:0559       producer::~producer()
+ 0460:0086       producer::run()
+ 06B0:00DC       scheduler::get()
+ 06B0:0005       scheduler::put(pcb far*)
+ 054F:0149       semaphore::
+ 054F:0003       semaphore::semaphore(int)
+ 054F:0060       semaphore::~semaphore()
+ 054F:00F5       semaphore::signal()
+ 054F:0129       semaphore::val() const
+ 054F:00B0       semaphore::wait(unsigned int)
+ 0000:0697       set_new_handler(void(far*)())
+ 0000:39EA       streambuf::streambuf()
+ 0000:3C1E       streambuf::~streambuf()
+ 0000:3999       streambuf::doallocate()
+ 0000:3ABE       streambuf::do_sgetn(char far*,int)
+ 0000:3B75       streambuf::do_sputn(const char far*,int)
+ 0000:3C9A       streambuf::overflow(int)
+ 0000:3CA9       streambuf::pbackfail(int)
+ 0000:3E65       streambuf::seekoff(long,seek_dir,int)
+ 0000:3E77       streambuf::seekpos(long,int)
+ 0000:3CEB       streambuf::setb(char far*,char far*,int)
+ 0000:3CB8       streambuf::setbuf(char far*,int)
+ 0000:3DA1       streambuf::setg(char far*,char far*,char far*)
+ 0000:3E12       streambuf::setp(char far*,char far*)
+ 0000:3EA2       streambuf::sputn(const char far*,int)
+ 0000:3F1F       streambuf::sync()
+ 0000:3F72       streambuf::underflow()
+ 064C:02ED       thread::
+ 064C:020C       thread::thread(char far*,unsigned long,unsigned int)
+ 064C:018E       thread::~thread()
+ 064C:02DB       thread::dispatch()
+ 064C:00AF       thread::getid()
+ 064C:0155       thread::getidof(char far*)
+ 064C:00D5       thread::getname()
+ 064C:0106       thread::getthreadbyid(int)
+ 064C:02F5       thread::run()
+ 064C:0007       thread::start()
+ 064C:029D       thread::waitforchildren()
+ 064C:0047       thread::waittocomplete()
+ 064C:0081       thread::wakeup()
+ 0460:0003       tick()
+ 067C:0001       timer::timer()
+ 067C:005D       timer::~timer()
+ 067C:00A0       timer::newinterruptroutine()
+ 06DE:0000       timer::oldinterruptroutine
+ 06DE:0006       timer::stopwatch
+ 06DE:0004       timer::uptime
+ 06A0:00BE       umain::
+ 06A0:000D       umain::umain(int,char far*far*)
+ 06A0:00C6       umain::~umain()
+ 06A0:0091       umain::run()
+ 0460:0216       usermain(int,char far*far*)
+ 06E5:0000       DATASEG@
+ 0000:0284       DGROUP@
+ 0000:03ED       F_LDIV@
+ 0000:03FC       F_LMOD@
+ 0000:03F4       F_LUDIV@
+ 0000:0404       F_LUMOD@
+ 0000:049B       F_LXLSH@
+ 0000:03A5       F_LXMUL@
+ 0000:04BC       F_LXURSH@
+ 0000:04DD       F_PADD@
+ 0000:050C       F_PSUB@
+ 0000:03ED       LDIV@
+ 0000:03FC       LMOD@
+ 0000:03F4       LUDIV@
+ 0000:0404       LUMOD@
+ 0000:049B       LXLSH@
+ 0000:03A5       LXMUL@
+ 0000:04BC       LXURSH@
+ 0000:03EA       N_LDIV@
+ 0000:03F9       N_LMOD@
+ 0000:03F1       N_LUDIV@
+ 0000:0401       N_LUMOD@
+ 0000:0498       N_LXLSH@
+ 0000:04B9       N_LXURSH@
+ 0000:04DA       N_PADD@
+ 0000:0711       N_PCMP@
+ 0000:0509       N_PSUB@
+ 0000:04DD       PADD@
+ 0000:050C       PSUB@
+ 0000:026D       _ABORT
+ 0000:0288       _ATEXIT
+ 0000:152B       _ATOI
+ 0000:14AA       _ATOL
+ 06E5:0550       _CERR
+ 06E5:04EE       _CIN
+ 06E5:0580       _CLOG
+ 0000:1543       _CLOSE
+ 06C9:0014       _CONSUMERNAME
+ 06E5:0520       _COUT
+ 06E5:007F       _ERRNO
+ 0000:034E       _EXIT
+ 0000:0EA1       _FARFREE
+ 0000:0FB5       _FARMALLOC
+ 0000:1119       _FARREALLOC
+ 0000:15A9       _FFLUSH
+ 06E1:0004       _FIRST
+ 0000:167D       _FLUSHALL
+ 0000:0EA1       _FREE
+ 0000:1757       _FSEEK
+ 0000:17DE       _FTELL
+ 0000:03BC       _GETVECT
+ 0000:0599       _ISATTY
+ 0000:18CB       _ITOA
+ 06CD:000E       _IVTENTRY9
+ 06CD:0013       _KENAME
+ 06CD:001C       _KEYMAP
+ 06E1:0008       _LAST
+ 06E1:000C       _LAST_GET
+ 0000:0661       _LSEEK
+ 0000:1921       _LTOA
+ 068F:0001       _MAIN
+ 0000:0FAB       _MALLOC
+ 0000:1950       _MEMCPY
+ 06C9:0010       _N
+ 0000:1A66       _READ
+ 0000:1112       _REALLOC
+ 06C9:000C       _SEMPREEMPT
+ 0000:1487       _SETBLOCK
+ 0000:1A69       _SETVBUF
+ 0000:03D2       _SETVECT
+ 06C9:0018       _SLEEPSEM
+ 0000:1BDB       _SPRINTF
+ 0000:1C2C       _STRCMP
+ 0000:1C5F       _STRLEN
+ 06C9:0012       _THEEND
+ 06C9:000E       _TIME_SLICE
+ 0000:18FD       _ULTOA
+ 06DE:0008       _UPTIME
+ 0000:1C04       _VSPRINTF
+ 0000:1E44       _WRITE
+ 0000:1000  Abs  __AHINCR
+ 0000:000C  Abs  __AHSHIFT
+ 06E5:04DA       __ARGC
+ 06E5:04DC       __ARGV
+ 06E5:0092       __ATEXITCNT
+ 06E5:0094       __ATEXITTBL
+ 0000:1242       __BRK
+ 06E5:0089       __BRKLVL
+ 06E5:006B       __C0ARGC
+ 06E5:006D       __C0ARGV
+ 06E5:0071       __C0ENVIRON
+ 0000:037D       __CEXIT
+ 0000:0158       __CHECKNULL
+ 0000:0145       __CLEANUP
+ 0000:157E       __CLOSE
+ 06E5:0114       __CTYPE
+ 0000:0000  Abs  __CVTFAK
+ 0000:0392       __C_EXIT
+ 06E5:03DC       __DOSERRNO
+ 0000:0580       __DOSERROR
+ 06E5:03DE       __DOSERRORTOSV
+ 06E5:0075       __ENVLNG
+ 06E5:0077       __ENVSEG
+ 06E5:0079       __ENVSIZE
+ 0000:0364       __EXIT
+ 06E5:0216       __EXITBUF
+ 06E5:021A       __EXITFOPEN
+ 06E5:021E       __EXITOPEN
+ 06E5:0085       __HEAPBASE
+ 06E5:008D       __HEAPTOP
+ 06E5:005B       __INT0VECTOR
+ 06E5:005F       __INT4VECTOR
+ 06E5:0063       __INT5VECTOR
+ 06E5:0067       __INT6VECTOR
+ 0000:053A       __IOERROR
+ 0000:05B1       __LONGTOA
+ 0000:0286       __MMODEL
+ 06E5:0438       __NEW_HANDLER
+ 06E5:03B2       __NFILE
+ 06E5:03B4       __OPENFD
+ 06E5:007D       __OSMAJOR
+ 06E5:007E       __OSMINOR
+ 06E5:007D       __OSVERSION
+ 06E5:007B       __PSP
+ 0000:0732       __READ
+ 0000:1352       __REALCVT
+ 06E5:05F2       __REALCVTVECTOR
+ 0000:01AE       __RESTOREZERO
+ 0000:1294       __SBRK
+ 06E5:05F4       __SCANTODVECTOR
+ 0000:0000  Abs  __SETARGV__
+ 0000:076E       __SETUPIO
+ 06E5:0081       __STARTTIME
+ 06E5:043C       __STKLEN
+ 06E5:0222       __STREAMS
+ 0000:0159       __TERMINATE
+ 0000:063A       __UTOA
+ 06E5:007D       __VERSION
+ 0000:0885       __VPRINTER
+ 0000:1DF5       __WRITE
+ 0000:1E47       __XFFLUSH
+ 0000:0D61       ___FIRST
+ 0000:0D63       ___LAST
+ 0000:1977       ___READ
+ 0000:0D65       ___ROVER
+ 06E5:05B8       ___STDERR_STREAMBUF
+ 06E5:05B0       ___STDIN_STREAMBUF
+ 06E5:05B4       ___STDOUT_STREAMBUF
+ 0000:1C85       ___WRITE
+
+  Address         Publics by Value
+
+ 0000:0000  Abs  __SETARGV__
+ 0000:0000  Abs  __CVTFAK
+ 0000:000C  Abs  __AHSHIFT
+ 0000:0145       __CLEANUP
+ 0000:0158       __CHECKNULL
+ 0000:0159       __TERMINATE
+ 0000:01AE       __RESTOREZERO
+ 0000:026D       _ABORT
+ 0000:0284       DGROUP@
+ 0000:0286       __MMODEL
+ 0000:0288       _ATEXIT
+ 0000:02BC       operator delete(void far*)
+ 0000:034E       _EXIT
+ 0000:0364       __EXIT
+ 0000:037D       __CEXIT
+ 0000:0392       __C_EXIT
+ 0000:03A5       F_LXMUL@
+ 0000:03A5       LXMUL@
+ 0000:03BC       _GETVECT
+ 0000:03D2       _SETVECT
+ 0000:03EA       N_LDIV@
+ 0000:03ED       F_LDIV@
+ 0000:03ED       LDIV@
+ 0000:03F1       N_LUDIV@
+ 0000:03F4       F_LUDIV@
+ 0000:03F4       LUDIV@
+ 0000:03F9       N_LMOD@
+ 0000:03FC       F_LMOD@
+ 0000:03FC       LMOD@
+ 0000:0401       N_LUMOD@
+ 0000:0404       LUMOD@
+ 0000:0404       F_LUMOD@
+ 0000:0498       N_LXLSH@
+ 0000:049B       LXLSH@
+ 0000:049B       F_LXLSH@
+ 0000:04B9       N_LXURSH@
+ 0000:04BC       LXURSH@
+ 0000:04BC       F_LXURSH@
+ 0000:04DA       N_PADD@
+ 0000:04DD       F_PADD@
+ 0000:04DD       PADD@
+ 0000:0509       N_PSUB@
+ 0000:050C       F_PSUB@
+ 0000:050C       PSUB@
+ 0000:053A       __IOERROR
+ 0000:0580       __DOSERROR
+ 0000:0599       _ISATTY
+ 0000:05B1       __LONGTOA
+ 0000:063A       __UTOA
+ 0000:0661       _LSEEK
+ 0000:0697       set_new_handler(void(far*)())
+ 0000:06C8       operator new(unsigned int)
+ 0000:0711       N_PCMP@
+ 0000:0732       __READ
+ 0000:076E       __SETUPIO
+ 0000:0885       __VPRINTER
+ 0000:0D61       ___FIRST
+ 0000:0D63       ___LAST
+ 0000:0D65       ___ROVER
+ 0000:0EA1       _FREE
+ 0000:0EA1       _FARFREE
+ 0000:0FAB       _MALLOC
+ 0000:0FB5       _FARMALLOC
+ 0000:1000  Abs  __AHINCR
+ 0000:1112       _REALLOC
+ 0000:1119       _FARREALLOC
+ 0000:1242       __BRK
+ 0000:1294       __SBRK
+ 0000:1352       __REALCVT
+ 0000:1487       _SETBLOCK
+ 0000:14AA       _ATOL
+ 0000:152B       _ATOI
+ 0000:1543       _CLOSE
+ 0000:157E       __CLOSE
+ 0000:15A9       _FFLUSH
+ 0000:167D       _FLUSHALL
+ 0000:1757       _FSEEK
+ 0000:17DE       _FTELL
+ 0000:18CB       _ITOA
+ 0000:18FD       _ULTOA
+ 0000:1921       _LTOA
+ 0000:1950       _MEMCPY
+ 0000:1977       ___READ
+ 0000:1A66       _READ
+ 0000:1A69       _SETVBUF
+ 0000:1BDB       _SPRINTF
+ 0000:1C04       _VSPRINTF
+ 0000:1C2C       _STRCMP
+ 0000:1C5F       _STRLEN
+ 0000:1C85       ___WRITE
+ 0000:1DF5       __WRITE
+ 0000:1E44       _WRITE
+ 0000:1E47       __XFFLUSH
+ 0000:2029       iostream_delete()
+ 0000:2131       endl(ostream far&)
+ 0000:2161       filebuf::close()
+ 0000:220F       filebuf::filebuf(int)
+ 0000:2328       filebuf::~filebuf()
+ 0000:23CA       filebuf::overflow(int)
+ 0000:2524       filebuf::setbuf(char far*,int)
+ 0000:25E7       filebuf::seekoff(long,seek_dir,int)
+ 0000:27A3       filebuf::sync()
+ 0000:2944       filebuf::underflow()
+ 0000:2B02       istream_withassign::operator =(streambuf far*)
+ 0000:2B29       istream::istream()
+ 0000:2BB7       istream_withassign::istream_withassign()
+ 0000:2C4E       istream::~istream()
+ 0000:2CC6       istream_withassign::~istream_withassign()
+ 0000:2D4F       ostream_withassign::operator =(streambuf far*)
+ 0000:2D76       ostream::ostream()
+ 0000:2DFB       ostream_withassign::ostream_withassign()
+ 0000:2E92       ostream::~ostream()
+ 0000:2F17       ostream_withassign::~ostream_withassign()
+ 0000:2FA0       ostream::flush()
+ 0000:30D8       ostream::operator <<(long)
+ 0000:326B       ostream::operator <<(unsigned long)
+ 0000:3396       ostream::operator <<(char)
+ 0000:35D8       ostream::do_opfx()
+ 0000:3612       ostream::do_osfx()
+ 0000:3675       ostream::outstr(const char far*,const char far*)
+ 0000:3999       streambuf::doallocate()
+ 0000:39EA       streambuf::streambuf()
+ 0000:3ABE       streambuf::do_sgetn(char far*,int)
+ 0000:3B75       streambuf::do_sputn(const char far*,int)
+ 0000:3C1E       streambuf::~streambuf()
+ 0000:3C9A       streambuf::overflow(int)
+ 0000:3CA9       streambuf::pbackfail(int)
+ 0000:3CB8       streambuf::setbuf(char far*,int)
+ 0000:3CEB       streambuf::setb(char far*,char far*,int)
+ 0000:3DA1       streambuf::setg(char far*,char far*,char far*)
+ 0000:3E12       streambuf::setp(char far*,char far*)
+ 0000:3E65       streambuf::seekoff(long,seek_dir,int)
+ 0000:3E77       streambuf::seekpos(long,int)
+ 0000:3EA2       streambuf::sputn(const char far*,int)
+ 0000:3F1F       streambuf::sync()
+ 0000:3F72       streambuf::underflow()
+ 0000:3FAC       ios::ios()
+ 0000:3FF8       ios::~ios()
+ 0000:404F       ios::init(streambuf far*)
+ 0000:40AA       ios::setf(long)
+ 0000:4199       ios::setstate(int)
+ 0000:41C6       ios::tie(ostream far*)
+ 0423:0007       idlethread::idlethread()
+ 0423:0075       idlethread::~idlethread()
+ 0423:00C9       idlethread::run()
+ 0423:00D7       idlethread::
+ 0430:000F       boundedbuffer::boundedbuffer(unsigned int)
+ 0430:00DE       boundedbuffer::~boundedbuffer()
+ 0430:0176       boundedbuffer::append(char)
+ 0430:024E       boundedbuffer::take()
+ 0460:0003       tick()
+ 0460:000F       producer::producer(boundedbuffer far*,char far*,char,unsigned int)
+ 0460:0086       producer::run()
+ 0460:00D2       consumer::consume(char)
+ 0460:0119       consumer::run()
+ 0460:0216       usermain(int,char far*far*)
+ 0460:04F5       consumer::
+ 0460:04FD       consumer::~consumer()
+ 0460:0551       producer::
+ 0460:0559       producer::~producer()
+ 04BA:000D       eventrt9()
+ 04BA:003A       keyboardevent::keyboardevent(boundedbuffer far*)
+ 04BA:00B3       keyboardevent::run()
+ 04BA:024E       keyboardevent::
+ 04BA:0256       keyboardevent::~keyboardevent()
+ 04E4:000A       ivtentry::ivtentry(unsigned char,(far*)(),...)
+ 04E4:0071       ivtentry::~ivtentry()
+ 04E4:00B5       ivtentry::signalall()
+ 04F1:000F       kernelev::kernelev(unsigned char)
+ 04F1:00A1       kernelev::~kernelev()
+ 04F1:0100       kernelev::waitev(unsigned int)
+ 04F1:01F6       kernelev::signalev()
+ 0519:0007       event::event(unsigned char)
+ 0519:0056       event::~event()
+ 0519:0094       event::wait(int)
+ 0519:00C5       event::signal()
+ 0527:0005       kernelsem::kernelsem(int)
+ 0527:0056       kernelsem::~kernelsem()
+ 0527:00B5       kernelsem::block(unsigned int)
+ 0527:0150       kernelsem::unblock()
+ 0527:01D8       kernelsem::wait(unsigned int)
+ 0527:0244       kernelsem::signal()
+ 0527:026E       kernelsem::getval()
+ 054F:0003       semaphore::semaphore(int)
+ 054F:0060       semaphore::~semaphore()
+ 054F:00B0       semaphore::wait(unsigned int)
+ 054F:00F5       semaphore::signal()
+ 054F:0129       semaphore::val() const
+ 054F:0149       semaphore::
+ 0564:0001       kernel::begin(int,char far*far*)
+ 0564:0114       kernel::end()
+ 0564:0202       kernel::dispatch()
+ 0597:000E       pcb::pcb(char far*,unsigned long,unsigned int,thread far*)
+ 0597:01E4       pcb::~pcb()
+ 0597:02A2       pcb::getid()
+ 0597:02B6       pcb::getname()
+ 0597:02CF       pcb::getmythread()
+ 0597:02E8       pcb::wrapper()
+ 0597:03A4       pcb::emptyselfsem()
+ 0597:0407       pcb::allocatecontext()
+ 0597:04CA       pcb::waitforchildren(pcb far*)
+ 0597:0543       pcb::waittocomplete(pcb far*)
+ 0597:05AC       pcb::wakeup()
+ 05FC:0002       pcblist::pcblist()
+ 05FC:0040       pcblist::~pcblist()
+ 05FC:00B0       pcblist::insert(pcb far*)
+ 05FC:0136       pcblist::getfirst()
+ 05FC:0174       pcblist::getandremovefirst()
+ 05FC:01E7       pcblist::remove(pcb far*)
+ 05FC:02A0       pcblist::getbyid(int)
+ 05FC:02FE       pcblist::getfreeid()
+ 05FC:0332       pcblist::getidbyname(char far*)
+ 05FC:03A4       pcblist::handletimedblock()
+ 05FC:0450       pcblist::hasblocked()
+ 05FC:04A8       pcblist::signalallevents(unsigned char)
+ 064C:0007       thread::start()
+ 064C:0047       thread::waittocomplete()
+ 064C:0081       thread::wakeup()
+ 064C:00AF       thread::getid()
+ 064C:00D5       thread::getname()
+ 064C:0106       thread::getthreadbyid(int)
+ 064C:0155       thread::getidof(char far*)
+ 064C:018E       thread::~thread()
+ 064C:020C       thread::thread(char far*,unsigned long,unsigned int)
+ 064C:029D       thread::waitforchildren()
+ 064C:02DB       thread::dispatch()
+ 064C:02ED       thread::
+ 064C:02F5       thread::run()
+ 067C:0001       timer::timer()
+ 067C:005D       timer::~timer()
+ 067C:00A0       timer::newinterruptroutine()
+ 068F:0001       _MAIN
+ 06A0:000D       umain::umain(int,char far*far*)
+ 06A0:0091       umain::run()
+ 06A0:00BE       umain::
+ 06A0:00C6       umain::~umain()
+ 06B0:0005       scheduler::put(pcb far*)
+ 06B0:00DC       scheduler::get()
+ 06C9:000C       _SEMPREEMPT
+ 06C9:000E       _TIME_SLICE
+ 06C9:0010       _N
+ 06C9:0012       _THEEND
+ 06C9:0014       _CONSUMERNAME
+ 06C9:0018       _SLEEPSEM
+ 06CD:000E       _IVTENTRY9
+ 06CD:0013       _KENAME
+ 06CD:001C       _KEYMAP
+ 06DA:0000       kernel::pcblist
+ 06DA:0004       kernel::timedlist
+ 06DA:0008       kernel::blockingevlist
+ 06DA:000C       kernel::running
+ 06DA:0010       kernel::timer
+ 06DA:0014       kernel::backtokernel
+ 06DA:0018       kernel::idlethread
+ 06DE:0000       timer::oldinterruptroutine
+ 06DE:0004       timer::uptime
+ 06DE:0006       timer::stopwatch
+ 06DE:0008       _UPTIME
+ 06E1:0004       _FIRST
+ 06E1:0008       _LAST
+ 06E1:000C       _LAST_GET
+ 06E2:0000       filebuf::openprot
+ 06E3:0000       ios::basefield
+ 06E3:0004       ios::adjustfield
+ 06E3:0008       ios::floatfield
+ 06E3:000C       ios::nextbit
+ 06E3:0010       ios::usercount
+ 06E3:0012       ios::stdioflush
+ 06E5:0000       DATASEG@
+ 06E5:005B       __INT0VECTOR
+ 06E5:005F       __INT4VECTOR
+ 06E5:0063       __INT5VECTOR
+ 06E5:0067       __INT6VECTOR
+ 06E5:006B       __C0ARGC
+ 06E5:006D       __C0ARGV
+ 06E5:0071       __C0ENVIRON
+ 06E5:0075       __ENVLNG
+ 06E5:0077       __ENVSEG
+ 06E5:0079       __ENVSIZE
+ 06E5:007B       __PSP
+ 06E5:007D       __OSVERSION
+ 06E5:007D       __OSMAJOR
+ 06E5:007D       __VERSION
+ 06E5:007E       __OSMINOR
+ 06E5:007F       _ERRNO
+ 06E5:0081       __STARTTIME
+ 06E5:0085       __HEAPBASE
+ 06E5:0089       __BRKLVL
+ 06E5:008D       __HEAPTOP
+ 06E5:0092       __ATEXITCNT
+ 06E5:0094       __ATEXITTBL
+ 06E5:0114       __CTYPE
+ 06E5:0216       __EXITBUF
+ 06E5:021A       __EXITFOPEN
+ 06E5:021E       __EXITOPEN
+ 06E5:0222       __STREAMS
+ 06E5:03B2       __NFILE
+ 06E5:03B4       __OPENFD
+ 06E5:03DC       __DOSERRNO
+ 06E5:03DE       __DOSERRORTOSV
+ 06E5:0438       __NEW_HANDLER
+ 06E5:043C       __STKLEN
+ 06E5:04DA       __ARGC
+ 06E5:04DC       __ARGV
+ 06E5:04EE       _CIN
+ 06E5:0520       _COUT
+ 06E5:0550       _CERR
+ 06E5:0580       _CLOG
+ 06E5:05B0       ___STDIN_STREAMBUF
+ 06E5:05B4       ___STDOUT_STREAMBUF
+ 06E5:05B8       ___STDERR_STREAMBUF
+ 06E5:05F2       __REALCVTVECTOR
+ 06E5:05F4       __SCANTODVECTOR
+
+Program entry point at 0000:0000
+
